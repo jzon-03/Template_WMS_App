@@ -309,19 +309,20 @@ body {
 }
 
 .search-input {
-    background-color: var(--gray-100);
-    border: 1px solid var(--gray-200);
+    background-color: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
     padding: 0.5rem 0.75rem 0.5rem 2.5rem;
     font-size: var(--font-size-sm);
     width: 300px;
     transition: var(--transition);
+    color: var(--text-primary);
 }
 
 .search-input:focus {
     outline: none;
     border-color: var(--primary-color);
-    background-color: var(--white);
+    background-color: var(--bg-elevated);
     box-shadow: 0 0 0 3px var(--primary-light);
 }
 
@@ -330,7 +331,7 @@ body {
     left: 0.75rem;
     top: 50%;
     transform: translateY(-50%);
-    color: var(--gray-400);
+    color: var(--text-muted);
     font-size: var(--font-size-sm);
 }
 
@@ -338,7 +339,7 @@ body {
     position: relative;
     background: none;
     border: none;
-    color: var(--gray-500);
+    color: var(--text-muted);
     font-size: var(--font-size-lg);
     cursor: pointer;
     padding: 0.5rem;
@@ -347,8 +348,8 @@ body {
 }
 
 .notification-btn:hover {
-    color: var(--gray-700);
-    background-color: var(--gray-100);
+    color: var(--text-primary);
+    background-color: var(--bg-tertiary);
 }
 
 .notification-badge {

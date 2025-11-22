@@ -366,12 +366,12 @@
     
     /* Orders mobile cards */
     .order-card {
-        background: white;
-        border: 1px solid var(--gray-200);
+        background: var(--bg-secondary);
+        border: 1px solid var(--border-color);
         border-radius: var(--border-radius);
         padding: 1rem;
         margin-bottom: 1rem;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
     }
     
     .order-card-header {

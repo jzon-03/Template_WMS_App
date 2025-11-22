@@ -15,10 +15,10 @@
 }
 
 .chart-container {
-    background: var(--white);
+    background: var(--bg-secondary);
     border-radius: var(--border-radius-lg);
     padding: 1.5rem;
-    border: 1px solid var(--gray-200);
+    border: 1px solid var(--border-color);
     box-shadow: var(--shadow-sm);
 }
 
@@ -32,12 +32,12 @@
 .chart-title {
     font-size: var(--font-size-lg);
     font-weight: 600;
-    color: var(--gray-900);
+    color: var(--text-primary);
 }
 
 .chart-subtitle {
     font-size: var(--font-size-sm);
-    color: var(--gray-500);
+    color: var(--text-muted);
     margin-top: 0.25rem;
 }
 
@@ -98,7 +98,7 @@
     align-items: center;
     gap: 1rem;
     padding: 1rem 0;
-    border-bottom: 1px solid var(--gray-200);
+    border-bottom: 1px solid var(--border-color);
 }
 
 .activity-item:last-child {
@@ -139,13 +139,13 @@
 
 .activity-title {
     font-weight: 500;
-    color: var(--gray-900);
+    color: var(--text-primary);
     margin-bottom: 0.25rem;
 }
 
 .activity-desc {
     font-size: var(--font-size-sm);
-    color: var(--gray-600);
+    color: var(--text-secondary);
 }
 
 .activity-time {
