@@ -36,6 +36,32 @@
     .form-col {
         width: 100%;
     }
+    
+    /* Orders medium screen adjustments */
+    .orders-controls {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    
+    .orders-controls .control-group {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+    
+    .orders-filters {
+        overflow-x: auto;
+        padding-bottom: 0.5rem;
+    }
+    
+    .orders-filters .filter-group {
+        min-width: 600px;
+        display: flex;
+        gap: 0.5rem;
+    }
+    
+    .orders-stats .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 /* Small screens (576px to 767px) */
@@ -187,8 +213,42 @@
         gap: 1rem;
     }
     
+    .orders-controls .control-group {
+        overflow-x: auto;
+        white-space: nowrap;
+        padding-bottom: 0.5rem;
+    }
+    
+    .orders-controls .control-group .btn {
+        margin-right: 0.5rem;
+        flex-shrink: 0;
+    }
+    
+    .orders-controls .view-controls {
+        order: -1;
+        margin-bottom: 1rem;
+    }
+    
+    .orders-filters {
+        overflow-x: auto;
+        padding-bottom: 0.5rem;
+    }
+    
     .orders-filters .filter-group {
         min-width: 700px;
+        display: flex;
+        gap: 0.5rem;
+    }
+    
+    .orders-filters .filter-group .form-group {
+        margin-bottom: 0;
+        min-width: 120px;
+        flex-shrink: 0;
+    }
+    
+    .orders-stats .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
     }
     
     /* Warehouse specific mobile styles */
@@ -275,9 +335,114 @@
         display: none;
     }
     
+    /* Orders table specific mobile improvements */
+    .orders-content .table th:nth-child(1),
+    .orders-content .table td:nth-child(1) {
+        /* Hide checkbox column on mobile */
+        display: none;
+    }
+    
+    .orders-content .table th:nth-child(6),
+    .orders-content .table td:nth-child(6),
+    .orders-content .table th:nth-child(7),
+    .orders-content .table td:nth-child(7) {
+        /* Hide order date and delivery date on very small screens */
+        display: none;
+    }
+    
+    /* Convert table to card layout on very small screens */
+    .orders-content .table-container {
+        display: none;
+    }
+    
+    .orders-content .orders-mobile-cards {
+        display: block;
+    }
+    
     .inventory-card,
     .kanban-card {
         margin-bottom: 1rem;
+    }
+    
+    /* Orders mobile cards */
+    .order-card {
+        background: white;
+        border: 1px solid var(--gray-200);
+        border-radius: var(--border-radius);
+        padding: 1rem;
+        margin-bottom: 1rem;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+    
+    .order-card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 0.75rem;
+    }
+    
+    .order-card-title {
+        font-weight: 600;
+        font-size: var(--font-size-lg);
+        color: var(--text-primary);
+        margin-bottom: 0.25rem;
+    }
+    
+    .order-card-customer {
+        font-size: var(--font-size-sm);
+        color: var(--text-secondary);
+    }
+    
+    .order-card-body {
+        margin-bottom: 1rem;
+    }
+    
+    .order-card-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0.5rem;
+    }
+    
+    .order-card-row:last-child {
+        margin-bottom: 0;
+    }
+    
+    .order-card-label {
+        font-size: var(--font-size-sm);
+        color: var(--text-secondary);
+        font-weight: 500;
+    }
+    
+    .order-card-value {
+        font-size: var(--font-size-sm);
+        color: var(--text-primary);
+    }
+    
+    .order-card-actions {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+    }
+    
+    .order-card-actions .btn {
+        flex: 1;
+        min-width: 0;
+        font-size: var(--font-size-xs);
+    }
+    
+    /* Orders stats mobile */
+    .orders-stats .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+    
+    .orders-stats .stat-card {
+        padding: 1rem;
+    }
+    
+    .orders-stats .stat-value {
+        font-size: var(--font-size-xl);
     }
 }
 
@@ -384,7 +549,7 @@
     .stat-icon,
     .progress-bar {
         -webkit-print-color-adjust: exact;
-        color-adjust: exact;
+        print-color-adjust: exact;
     }
 }
 

@@ -548,6 +548,10 @@ window.OrdersModule = {
                     </tbody>
                 </table>
             </div>
+            
+            <div class="orders-mobile-cards" style="display: none;">
+                ${this.filteredData.map(order => this.renderOrderCard(order)).join('')}
+            </div>
         `;
         
         container.innerHTML = table;
@@ -597,6 +601,59 @@ window.OrdersModule = {
                     </div>
                 </td>
             </tr>
+        `;
+    },
+
+    renderOrderCard(order) {
+        const statusBadge = this.getStatusBadge(order.status);
+        const priorityBadge = this.getPriorityBadge(order.priority);
+        const orderDate = new Date(order.orderDate).toLocaleDateString();
+        const deliveryDate = new Date(order.deliveryDate).toLocaleDateString();
+        
+        return `
+            <div class="order-card" data-id="${order.id}">
+                <div class="order-card-header">
+                    <div>
+                        <div class="order-card-title">${order.orderNumber}</div>
+                        <div class="order-card-customer">${order.customerName}</div>
+                    </div>
+                    <div style="display: flex; gap: 0.5rem; flex-direction: column; align-items: flex-end;">
+                        ${statusBadge}
+                        ${priorityBadge}
+                    </div>
+                </div>
+                
+                <div class="order-card-body">
+                    <div class="order-card-row">
+                        <span class="order-card-label">Items:</span>
+                        <span class="order-card-value">${order.items.length} item(s)</span>
+                    </div>
+                    <div class="order-card-row">
+                        <span class="order-card-label">Order Date:</span>
+                        <span class="order-card-value">${orderDate}</span>
+                    </div>
+                    <div class="order-card-row">
+                        <span class="order-card-label">Delivery:</span>
+                        <span class="order-card-value">${deliveryDate}</span>
+                    </div>
+                    <div class="order-card-row">
+                        <span class="order-card-label">Total:</span>
+                        <span class="order-card-value"><strong>$${order.total.toFixed(2)}</strong></span>
+                    </div>
+                </div>
+                
+                <div class="order-card-actions">
+                    <button class="btn btn-secondary btn-sm" data-action="view" data-id="${order.id}">
+                        <i class="fas fa-eye"></i> View
+                    </button>
+                    <button class="btn btn-primary btn-sm" data-action="process" data-id="${order.id}">
+                        <i class="fas fa-play"></i> Process
+                    </button>
+                    <button class="btn btn-success btn-sm" data-action="ship" data-id="${order.id}">
+                        <i class="fas fa-shipping-fast"></i> Ship
+                    </button>
+                </div>
+            </div>
         `;
     },
 

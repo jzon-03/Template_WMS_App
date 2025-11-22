@@ -600,3 +600,42 @@
 .stat-change.neutral {
     color: var(--gray-500);
 }
+
+/* Orders Components */
+.orders-header {
+    margin-bottom: 2rem;
+}
+
+.orders-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.control-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.view-controls {
+    display: flex;
+    align-items: center;
+}
+
+.orders-filters {
+    margin-bottom: 1rem;
+}
+
+.orders-filters .filter-group {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.orders-stats {
+    margin-bottom: 2rem;
+}
