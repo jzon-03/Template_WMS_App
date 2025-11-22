@@ -32,13 +32,13 @@
 }
 
 .btn-secondary {
-    background-color: var(--gray-100);
-    color: var(--gray-700);
-    border: 1px solid var(--gray-300);
+    background-color: var(--bg-tertiary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-light);
 }
 
 .btn-secondary:hover:not(:disabled) {
-    background-color: var(--gray-200);
+    background-color: var(--bg-elevated);
 }
 
 .btn-success {
@@ -85,17 +85,17 @@
 
 /* Cards */
 .card {
-    background-color: var(--white);
+    background-color: var(--bg-secondary);
     border-radius: var(--border-radius-lg);
     box-shadow: var(--shadow-sm);
-    border: 1px solid var(--gray-200);
+    border: 1px solid var(--border-color);
     overflow: hidden;
 }
 
 .card-header {
     padding: 1.5rem;
-    border-bottom: 1px solid var(--gray-200);
-    background-color: var(--gray-50);
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--bg-tertiary);
 }
 
 .card-title {
@@ -129,7 +129,7 @@
     display: block;
     margin-bottom: 0.5rem;
     font-weight: 500;
-    color: var(--gray-700);
+    color: var(--text-primary);
     font-size: var(--font-size-sm);
 }
 
@@ -138,11 +138,12 @@
 .form-textarea {
     width: 100%;
     padding: 0.75rem;
-    border: 1px solid var(--gray-300);
+    border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
     font-size: var(--font-size-sm);
     transition: var(--transition);
-    background-color: var(--white);
+    background-color: var(--bg-tertiary);
+    color: var(--text-primary);
 }
 
 .form-input:focus,
@@ -181,9 +182,9 @@
 
 /* Tables */
 .table-container {
-    background-color: var(--white);
+    background-color: var(--bg-secondary);
     border-radius: var(--border-radius-lg);
-    border: 1px solid var(--gray-200);
+    border: 1px solid var(--border-color);
     overflow: hidden;
 }
 
@@ -197,20 +198,20 @@
 .table td {
     padding: 1rem;
     text-align: left;
-    border-bottom: 1px solid var(--gray-200);
+    border-bottom: 1px solid var(--border-color);
 }
 
 .table th {
-    background-color: var(--gray-50);
+    background-color: var(--bg-tertiary);
     font-weight: 600;
-    color: var(--gray-700);
+    color: var(--text-primary);
     font-size: var(--font-size-xs);
     text-transform: uppercase;
     letter-spacing: 0.05em;
 }
 
 .table tr:hover {
-    background-color: var(--gray-50);
+    background-color: var(--bg-tertiary);
 }
 
 .table-actions {
@@ -237,23 +238,23 @@
 }
 
 .badge-success {
-    background-color: #d1fae5;
+    background-color: rgba(16, 185, 129, 0.1);
     color: var(--success-color);
 }
 
 .badge-warning {
-    background-color: #fef3c7;
+    background-color: rgba(245, 158, 11, 0.1);
     color: var(--warning-color);
 }
 
 .badge-error {
-    background-color: #fee2e2;
+    background-color: rgba(239, 68, 68, 0.1);
     color: var(--error-color);
 }
 
 .badge-gray {
-    background-color: var(--gray-200);
-    color: var(--gray-600);
+    background-color: var(--bg-tertiary);
+    color: var(--text-secondary);
 }
 
 /* Modals */
@@ -262,7 +263,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: var(--white);
+    background-color: var(--bg-secondary);
     border-radius: var(--border-radius-lg);
     box-shadow: var(--shadow-lg);
     max-width: 500px;
@@ -271,6 +272,7 @@
     overflow-y: auto;
     z-index: 2001;
     display: none;
+    border: 1px solid var(--border-color);
 }
 
 .modal.active {
@@ -283,20 +285,20 @@
     align-items: center;
     justify-content: space-between;
     padding: 1.5rem;
-    border-bottom: 1px solid var(--gray-200);
+    border-bottom: 1px solid var(--border-color);
 }
 
 .modal-title {
     font-size: var(--font-size-lg);
     font-weight: 600;
-    color: var(--gray-900);
+    color: var(--text-primary);
 }
 
 .modal-close {
     background: none;
     border: none;
     font-size: var(--font-size-lg);
-    color: var(--gray-400);
+    color: var(--text-muted);
     cursor: pointer;
     padding: 0.5rem;
     border-radius: var(--border-radius);
